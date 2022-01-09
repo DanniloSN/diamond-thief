@@ -28,6 +28,13 @@ func _physics_process(delta):
 		$GrabItem.set_cast_to(direction * CAST_SIZE)
 		if holding == null: $Sprites.rotation = direction.angle()
 	if holding != null: holding.move_and_slide(movement)
+	_process_animation()
+
+func _process_animation():
+	if holding != null or $GrabItem.enabled: _set_animation("grab")
+	else:
+		if direction == Vector2.ZERO: _set_animation("idle")
+		else: _set_animation("walk")
 
 func _grab():
 	if holding != null: holding = null

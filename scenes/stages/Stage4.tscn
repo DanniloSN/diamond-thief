@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Scenario.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/stages/StageStart.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Diamond.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Robot.tscn" type="PackedScene" id=4]
+
+[node name="Stage4" type="Node"]
+
+[node name="Scenario" parent="." instance=ExtResource( 1 )]
+
+[node name="Diamond" parent="." instance=ExtResource( 3 )]
+position = Vector2( 864, 288 )
+
+[node name="Robot1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 280, 40 )
+LASER_ENABLED = true
+INITIAL_LASER_ROTATION = 90
+
+[node name="Robot2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 408, 280 )
+LASER_ENABLED = true
+LASER_LENGTH = 175
+INITIAL_LASER_ROTATION = -90
+
+[node name="Robot3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 536, 40 )
+LASER_ENABLED = true
+INITIAL_LASER_ROTATION = 90
+
+[node name="Robot4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 664, 280 )
+LASER_ENABLED = true
+LASER_LENGTH = 175
+INITIAL_LASER_ROTATION = -90
+
+[node name="StageStart" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 32 )

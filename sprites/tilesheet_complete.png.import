@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/floor.png-8870646e23ec8c3ad77089faabc9e773.stex"
+path="res://.import/tilesheet_complete.png-8db5491a124125054df3b3aeb24bd888.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/floor.png"
-dest_files=[ "res://.import/floor.png-8870646e23ec8c3ad77089faabc9e773.stex" ]
+source_file="res://sprites/tilesheet_complete.png"
+dest_files=[ "res://.import/tilesheet_complete.png-8db5491a124125054df3b3aeb24bd888.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
