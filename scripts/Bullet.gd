@@ -10,11 +10,10 @@ func _physics_process(delta):
 func _on_Bullet_body_entered(body):
 	if dead: return
 	dead = true
-	Globals._game_over()
+	if body.is_in_group(Globals.PLAYER_GROUP): Globals._game_over()
 	queue_free()
 
 func _on_LifeTime_timeout():
 	if dead: return
 	dead = true
-	Globals._game_over()
 	queue_free()

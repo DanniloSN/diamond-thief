@@ -24,9 +24,9 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:snap-global="true"
-     inkscape:zoom="0.125"
-     inkscape:cx="-356"
-     inkscape:cy="1648"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="462.09428"
+     inkscape:cy="1122.8856"
      inkscape:window-width="1920"
      inkscape:window-height="1043"
      inkscape:window-x="1920"
@@ -615,7 +615,7 @@
        y="301.93884" />
     <g
        id="g2588"
-       transform="translate(42.201233,209.55053)">
+       transform="translate(21.621479,208.42799)">
       <rect
          style="fill:#000080;stroke-width:0.264583"
          id="rect2584"
@@ -639,7 +639,7 @@
        r="6.5481033"
        transform="rotate(-179.80344)" />
     <ellipse
-       style="fill:none;stroke:#a05a2c;stroke-width:0.232242"
+       style="fill:none;stroke:#a05a2c;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3118"
        cx="-118.58347"
        cy="284.6076"
@@ -647,12 +647,12 @@
        ry="9.2944098"
        transform="scale(-1,1)" />
     <ellipse
-       style="fill:none;stroke:#a05a2c;stroke-width:0.740129"
+       style="fill:none;stroke:#a05a2c;stroke-width:3.22349;stroke-miterlimit:4;stroke-dasharray:none"
        id="ellipse4505"
        cx="-118.58347"
        cy="284.6076"
-       rx="29.94277"
-       ry="29.62022"
+       rx="19.304016"
+       ry="19.096069"
        transform="scale(-1,1)" />
     <g
        id="g671"

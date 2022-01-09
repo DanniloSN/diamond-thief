@@ -10,7 +10,7 @@ var current_stage_index = 0
 var stages = [
 	{ # 1
 		"stage": "res://scenes/stages/Stage1.tscn",
-		"message": "Automatic Security System. Initial Test"
+		"message": "Automatic Security System.\nThis thing cannot allow the agent to steal the diamond"
 	},
 	{ # 2
 		"stage": "res://scenes/stages/Stage2.tscn",
@@ -18,11 +18,11 @@ var stages = [
 	},
 	{ # 3
 		"stage": "res://scenes/stages/Stage3.tscn",
-		"message": "A little better, but need one more"
+		"message": "A little better, but need one more unit"
 	},
 	{ # 4
 		"stage": "res://scenes/stages/Stage4.tscn",
-		"message": "Why the hell did they shoot themselves? Disable the movement! And add more units!"
+		"message": "Why the hell did they shoot themselves?\nDisable the movement! And add more units!"
 	},
 	{ # 5
 		"stage": "res://scenes/stages/Stage5.tscn",
@@ -42,12 +42,11 @@ func _input(event):
 func _change_stage(direction = 1):
 	if direction < 0 and current_stage_index == 0: return
 	elif direction > 0 and current_stage_index == stages.size() - 1: return
-	else:
-		current_stage_index += direction
-		get_tree().change_scene("res://scenes/stages/SplashStage.tscn")
+	if direction != 0: current_stage_index += direction
+	get_tree().change_scene("res://scenes/stages/SplashStage.tscn")
 
 func _game_over():
-	emit_signal("GAME_OVER")
+	 _change_stage(0)
 
 func _random_number(to: float, from = 0):
 	return rand_range(from, to)
