@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Scenario.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/stages/StageStart.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Diamond.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Sensor.tscn" type="PackedScene" id=4]
+
+[node name="Stage6" type="Node"]
+
+[node name="Scenario" parent="." instance=ExtResource( 1 )]
+
+[node name="Sensor" parent="." instance=ExtResource( 4 )]
+position = Vector2( 192, 200 )
+
+[node name="Robot" parent="Sensor" index="6"]
+position = Vector2( 0, 72 )
+ROTATION_DIRECTION = -1
+
+[node name="Sensor2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 720, 208 )
+
+[node name="Robot" parent="Sensor2" index="6"]
+position = Vector2( 0, 64 )
+
+[node name="Sensor3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 456, 112 )
+
+[node name="Robot" parent="Sensor3" index="6"]
+position = Vector2( 0, -64 )
+
+[node name="StageStart" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 40 )
+
+[node name="Diamond" parent="." instance=ExtResource( 3 )]
+position = Vector2( 864, 288 )
+
+[editable path="Sensor"]
+[editable path="Sensor2"]
+[editable path="Sensor3"]

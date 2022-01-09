@@ -20,10 +20,12 @@ var aiming_at = null
 
 func _ready():
 	add_to_group(Globals.ROBOT_GROUP)
-	if LASER_ENABLED:
-		$Laser.enabled = true
-		$Laser.rotation_degrees = INITIAL_LASER_ROTATION
-		$Laser.set_cast_to(Vector2(LASER_LENGTH, 0))
+	if LASER_ENABLED: _enable_laser()
+
+func _enable_laser():
+	$Laser.enabled = true
+	$Laser.rotation_degrees = INITIAL_LASER_ROTATION
+	$Laser.set_cast_to(Vector2(LASER_LENGTH, 0))
 
 func _draw():
 	if LASER_ENABLED:
@@ -61,4 +63,4 @@ func _shoot():
 	new_bullet.global_position = $Laser/BulletSpawnPoint.global_position
 	new_bullet.rotation_degrees = $Laser.rotation_degrees + Globals._random_number(-5, 5)
 	$AudioStreamPlayer2D.play()
-	get_parent().add_child(new_bullet)
+	get_tree().root.add_child(new_bullet)

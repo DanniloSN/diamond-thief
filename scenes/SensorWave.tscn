@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/SensorWave.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 4.0
+
+[node name="SensorWave" type="Area2D"]
+collision_layer = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+rotation = 0.785398
+color = Color( 0.945098, 1, 0, 0.501961 )
+polygon = PoolVector2Array( -3.53553, -2.12132, -2.12132, -3.53553, 7.15256e-07, -4.24264, 2.12132, -3.53553, 3.53553, -2.12132, 4.24264, 7.15256e-07, 3.53553, 2.12132, 2.12132, 3.53553, -7.15256e-07, 4.24264, -2.12132, 3.53553, -3.53553, 2.12132, -4.24264, -7.15256e-07 )
+
+[node name="LifeTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_SensorWave_body_entered"]
+[connection signal="timeout" from="LifeTimer" to="." method="_on_LifeTimer_timeout"]
